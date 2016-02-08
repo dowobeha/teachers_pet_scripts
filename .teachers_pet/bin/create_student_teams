@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Fail if any variable is not set
+set -o nounset
+
+# Ensure commands are not echoed to the terminal as they are run
+set +x
+
+# Read credentials
+source ~/.teachers_pet/.USERNAME.private_script
+source ~/.teachers_pet/.PASSWORD.private_script
+
+# Read other required variables
+source .ORGANIZATION.private_script
+source .STUDENTS.private_script
+
+
+# Create repositories
+teachers_pet create_student_teams --username="${USERNAME}" --password="${PASSWORD}" --students="${STUDENTS}" --organization="${ORGANIZATION}"

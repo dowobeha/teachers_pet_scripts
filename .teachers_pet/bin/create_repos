@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Require exactly one command line argument
+#
+if (( ${#} != 1 )); then
+    echo -e "Usage:\t${0} repository"
+    exit 1
+fi
+
+# Fail if any variable is not set
+set -o nounset
+
+# Ensure commands are not echoed to the terminal as they are run
+set +x
+
+# Set REPOSITORY to the value of the first command line argument
+REPOSITORY="${1}"
+
+# Read credentials
+source ~/.teachers_pet/.USERNAME.private_script
+source ~/.teachers_pet/.PASSWORD.private_script
+
+# Read other required variables
+source ${REPOSITORY}/../.ORGANIZATION.private_script
+source ${REPOSITORY}/../.STUDENTS.private_script
+
+
+# Create repositories
+teachers_pet create_repos --username="${USERNAME}" --password="${PASSWORD}" --students="${STUDENTS}" --organization="${ORGANIZATION}" --repository="${REPOSITORY}"

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+#if [[ "$_" == "$0" ]];
+
+#else
+
+#fi
+
+#echo $0
+#echo $(dirname $0)
+#echo $BASH_SOURCE
+#echo $_
+
+STUDENTS=$(cd "$(dirname "$_")" ; pwd -P)/students

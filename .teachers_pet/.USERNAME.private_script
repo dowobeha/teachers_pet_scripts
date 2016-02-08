@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Ensure permissions are set so only you have access to this file
+
+USERNAME="yourGithubUsernameHere"

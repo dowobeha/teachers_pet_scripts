@@ -1,0 +1,21 @@
+Helper scripts for managing assignments using Github
+----------------------------------------------------
+
+1) Install teachers_pet
+2) Clone this repository
+3) Modify the files in .teachers_pet to use your Github username and password
+4) Optionally, put the files in .teachers_pet/bin in your PATH
+
+Now, for each class:
+
+1) For each class, create a directory, following the layout provided in the example directory in Homework
+2) Within that directory, modify the files so that the students' Github usernames are in the file "students"
+3) Within that directory, modify the file .ORGANIZATION.private_script using your class's Github organization
+
+
+Next, within the class directory, create a directory for each homework assignment. Make each directory a git repo, and populate it with the files required for the assignment.
+
+Next:
+1) create_repos NAME_OF_HW_DIR
+2) create_student_teams NAME_OF_HW_DIR
+3) push_files NAME_OF_HW_DIR
